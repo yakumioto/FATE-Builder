@@ -13,12 +13,11 @@ jobs:
         name: Checkout
         uses: actions/checkout@v4
       - 
-        name: Clone FATE repo
+        name: Checkout FATE Repo
         uses: actions/checkout@v4
         with:
           repository: 'FederatedAI/FATE'
           ref: 'v1.11.4'
-          path: '../'
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v3
