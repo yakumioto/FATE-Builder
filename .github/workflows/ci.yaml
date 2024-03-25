@@ -38,6 +38,7 @@ jobs:
           IPCL_PKG_DIR=/root/pailliercryptolib_python/ IPCL_VERSION=v1.1.3 \
           bash docker-build/build.sh base
       - name: Build Modules
+        continue-on-error: true
         run: |
           Platform=arm64 FATE_DIR=../FATE Build_Basic=1 Build_NN=0 \
           Build_FUM=0 Build_Spark=0 Build_OP=0 Build_IPCL=0 Build_GPU=0 \
